@@ -13,8 +13,9 @@ public class SingleMessageWithSystemExample {
 
         String assistantMessage = api.completions(
             model,
-            "What is Java?",
-            "You are an assistant who speaks Brazilian Portuguese and provides short, concise, and objective answers of no more than 5 lines."
+            "What is Java?", //User message
+            "You are an assistant who provides short, "+ //System message
+            "concise, and objective answers of no more than 5 lines."
         );
 
         System.out.println(assistantMessage);
