@@ -15,20 +15,19 @@ public class ChatBotExample {
         GroqChatBot bot = new GroqChatBot(
             api,
             model,
-            "Você é um assistentente que fala português, fale como um ser humano da forma mais humanizada possível!"
+            "You are an assistant who speaks Portuguese. Speak in the most human-like manner possible!"
         );
 
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Bem vindo, você está conversando com o modelo: "+model);
-        System.out.println("Escreva \"sair\" para encerrar!");
+        System.out.println("Welcome! You are chatting with the model: " + model);
+        System.out.println("Type \"exit\" to end the conversation.");
 
-        while(true){
-
+        while (true) {
             System.out.print("$ ");
             String userMessage = sc.nextLine();
 
-            if("sair".equals(userMessage.toLowerCase())){
+            if ("exit".equalsIgnoreCase(userMessage)) {
                 sc.close();
                 break;
             }
@@ -38,8 +37,6 @@ public class ChatBotExample {
             System.out.println();
             System.out.println(assistantMessage);
             System.out.println();
-
         }
-
     }
 }

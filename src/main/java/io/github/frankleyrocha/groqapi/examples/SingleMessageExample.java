@@ -13,11 +13,10 @@ public class SingleMessageExample {
 
         String assistantMessage = api.completions(
             model,
-            "O que é Java?"
+            "What is Java?"
         );
 
         System.out.println(assistantMessage);
 
     }
-
 }
